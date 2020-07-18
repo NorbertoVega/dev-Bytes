@@ -27,7 +27,6 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
 
     private fun refreshDataFromNetwork() = viewModelScope.launch {
         try {
-            Log.v("DevByte", "Hereeeeeeeeeeeeee")
             val playlist = Network.devbytes.getPlaylist().await()
             _playlist.postValue(playlist.asDomainModel())
         } catch (networkError: IOException) {
