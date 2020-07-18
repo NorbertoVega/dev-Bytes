@@ -47,7 +47,7 @@ class DevByteFragment : Fragment() {
                 R.layout.fragment_dev_byte,
                 container,
                 false)
-        binding.setLifecycleOwner(viewLifecycleOwner)
+        binding.lifecycleOwner = this.viewLifecycleOwner
 
         binding.viewModel = viewModel
 

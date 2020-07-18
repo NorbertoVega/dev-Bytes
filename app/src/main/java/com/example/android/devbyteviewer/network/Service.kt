@@ -24,5 +24,5 @@ object Network {
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
 
-    val devbytes = retrofit.create(DevbyteService::class.java)
+    val devbytes: DevbyteService? = retrofit.create(DevbyteService::class.java)
 }
